@@ -15,6 +15,7 @@ h1{
     color:white;
     background-color: #2D3192cc;
     z-index:1;
+    /*시민갤러리 이미지와 겹치는데 값을 안주면 헤더가 밑에 깔린다*/
     /*background:linear-gradient(#000000,#2D3192cc);*/
 }
 .header>.nav{
