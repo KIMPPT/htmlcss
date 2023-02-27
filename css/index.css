@@ -43,11 +43,12 @@ h1{
     font-family: 'Noto Sans KR', sans-serif;
 }
 /*main*/
+/*
 .main{
-    /*
+    
     background-color: beige;
-    */
-}
+    
+} */
 /*section부분을 찾기 힘들것 같다면 메인에 두어도 상관없음*/
 section{
     max-width:1000px;
@@ -79,15 +80,17 @@ section{
 /*section2 행사 설명*/
 .section2{
     text-align:center;
-    padding:40px 0;
+    padding:60px 0;
     line-height:120%;
 }
+
 .section2>.title,
 .section2>.title>h1{
     margin-bottom:20px;
 }
 .section2>.intro>table{
     margin:auto;
+    margin-top:50px;
 }
 .section2>.intro>table tr>td:first-child{
     /*color:white;
@@ -103,8 +106,6 @@ section{
     font-family: 'Nanum Brush Script', cursive;
 }
 /*section3 시민갤러리*/
-.box3{
-}
 .box2>.section3>.title{
 display:flex;
 justify-content:space-between;
@@ -147,9 +148,18 @@ margin:20px 0;
 .box2>.section3>.gallery>h4{
     font-weight:bold;
 }
+.box2>.section3>.title>a{
+    background-color: #2d3192;
+    color:white;
+    text-decoration: none;
+    padding:8px 12px;
+    border-radius: 15px;
+}
 /*section4 관련뉴스*/
 .section4{
-    padding:30px 0;
+    margin-top:40px;
+    padding:60px 0;
+    height:350px;
 }
 .section4>table tr>td:first-child{
     color:#2d3192;
@@ -164,5 +174,43 @@ margin:20px 0;
 .section4>table{
     width:80%;
     margin:auto;
+    margin-top:30px;
+}
+/*footer 부분*/
+.footer{
+    display:flex;
+    justify-content:space-around;
+    background-color: #dddddd;
+    padding:10px 0;
+    align-items:center;
+}
+.footer>.info>p{
+    float:left;
+    padding-right:50px;
+    padding-bottom:10px;
+    color:gray;
+    font-size:0.8rem;
+}
+.footer>.info>p:last-child{
+    padding-right:0;
+    clear:both;
+}
+.topbutton{
+    position:fixed;
+    bottom:10px;
+    right:0;
+    width:80px;
+    height:80px;
+    background-color: rgba(0,0,255,50%);
+    border-radius:50%;
+    text-align:center;
+    box-sizing:border-box;
+    /*padding 값에 의해 원 모양이 찌그러 지는 것을 보호하기 위한 조치*/
+    padding-top:25px;
+}
+.topbutton>a{
+    text-decoration: none;
+    color:white;
+    font-size:1.5rem;
 }
 /*미디어 쿼리를 통한 CSS 디자인*/
