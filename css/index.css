@@ -1,0 +1,47 @@
+/*태그이름을 통한 CSS 디자인*/
+h1{
+    font-size:2rem;
+}
+/*클래스 이름을 통한 CSS 디자인*/
+/*header의 nav*/
+.header{
+    background-color: aqua;
+}
+.header>.nav{
+    background-color: aliceblue;;
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    box-sizing:border-box;
+    padding:10px 20px;
+    align-items:center;
+}
+.header>.nav>.menu{
+    display:flex;
+    width:30%;
+    justify-content:space-evenly;
+}
+.header>.nav>.title{
+    width:170px;
+    text-align:center;
+    font-size:1.5rem;
+}
+/*main*/
+.main{
+    background-color: beige;
+}
+/*section부분을 찾기 힘들것 같다면 메인에 두어도 상관없음*/
+section{
+    max-width:1000px;
+    box-sizing: border-box;
+    margin:auto;
+}
+/*section단위로 접근*/
+.box1{
+    width:100%;
+    min-height:300px;
+    height:50vh;
+    background-image: url(/image/balloons.jpg);
+}
+/*미디어 쿼리를 통한 CSS 디자인*/
