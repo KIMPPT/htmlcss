@@ -1,6 +1,7 @@
 /*폰트 나열*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
 /*태그이름을 통한 CSS 디자인*/
 h1{
     font-size:2rem;
@@ -33,6 +34,7 @@ h1{
 .header>.nav>.menu a{
     text-decoration: none;
     font-family: 'Black Han Sans', sans-serif;
+    color:white;
 }
 .header>.nav>.title{
     width:170px;
@@ -42,7 +44,9 @@ h1{
 }
 /*main*/
 .main{
+    /*
     background-color: beige;
+    */
 }
 /*section부분을 찾기 힘들것 같다면 메인에 두어도 상관없음*/
 section{
@@ -86,14 +90,79 @@ section{
     margin:auto;
 }
 .section2>.intro>table tr>td:first-child{
-    color:white;
-    background-color: #2d3192;
+    /*color:white;
+    background-*/color: #2d3192;
     padding:5px 10px;
-    border-radius:10px;
-    margin
+    border-right:2px #2d3192 solid;
+    font-weight:bolder;
 }
-/*section3 */
-
-/*section4 */
-
+.section2>.intro table tr td{
+    padding:5px 10px;
+}
+.section2>.title>h3{
+    font-family: 'Nanum Brush Script', cursive;
+}
+/*section3 시민갤러리*/
+.box3{
+}
+.box2>.section3>.title{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin:20px 0;
+}
+.box2>.section3>.gallery{
+    display:inline-block;
+    width:280px;
+    height:350px;
+    background-color: lightblue;
+    border-radius:20px;
+    text-align:center;
+}
+/*section3의 이미지 넣는 공간*/
+.box2>.section3>.gallery:nth-child(2)>.image{
+    margin:15px;
+    width:250px;
+    height:250px;
+    /*나중에 수정하기 위해 따로 추가*/
+    background-image: url(/image/balloons.jpg);
+    background-size: cover;
+}
+.box2>.section3>.gallery:nth-child(3)>.image{
+    margin:15px;
+    width:250px;
+    height:250px;
+    /*나중에 수정하기 위해 따로 추가*/
+    background-image: url(/image/balloons.jpg);
+    background-size: cover;
+}
+.box2>.section3>.gallery:nth-child(4)>.image{
+    margin:15px;
+    width:250px;
+    height:250px;
+    /*나중에 수정하기 위해 따로 추가*/
+    background-image: url(/image/balloons.jpg);
+    background-size: cover;
+}
+.box2>.section3>.gallery>h4{
+    font-weight:bold;
+}
+/*section4 관련뉴스*/
+.section4{
+    padding:30px 0;
+}
+.section4>table tr>td:first-child{
+    color:#2d3192;
+    font-weight:bolder;
+    padding-right:50px;
+}
+.section4>table tr>td{
+    padding:15px 0;
+    border-top: #2d3192 3px solid;
+    border-bottom:#2d3192 3px solid;
+}
+.section4>table{
+    width:80%;
+    margin:auto;
+}
 /*미디어 쿼리를 통한 CSS 디자인*/
