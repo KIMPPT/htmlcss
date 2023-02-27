@@ -14,7 +14,7 @@ h1{
     width:100%;
     color:white;
     background-color: #2D3192cc;
-    
+    z-index:1;
     /*background:linear-gradient(#000000,#2D3192cc);*/
 }
 .header>.nav{
@@ -25,6 +25,7 @@ h1{
     box-sizing:border-box;
     padding:10px 20px;
     align-items:center;
+
 }
 .header>.nav>.menu{
     display:flex;
@@ -41,6 +42,23 @@ h1{
     text-align:center;
     font-size:1.5rem;
     font-family: 'Noto Sans KR', sans-serif;
+}
+.header>.nav>.menu a:hover{
+    color:#ffff09;
+}
+.header>.nav>.menu a::after{
+    content:"";
+    display:inline-block;
+    width:0;
+    height:2px;
+    background-color: #ffff09;
+    position:absolute;
+    bottom:20px;
+    margin-left:-65px;
+}
+.header>.nav>.menu a:hover:after{
+    width:75px;
+    transition: all 1s;
 }
 /*main*/
 /*
@@ -121,24 +139,32 @@ margin:20px 0;
     text-align:center;
 }
 /*section3의 이미지 넣는 공간*/
-.box2>.section3>.gallery:nth-child(2)>.image{
+.box2>.section3>.gallery>.imagebox{
     margin:15px;
+    width:250px;
+    height:250px;
+    overflow:hidden;
+}
+.box2>.section3>.gallery>.imagebox:hover .image{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+.box2>.section3>.gallery:nth-child(2) .image{
+
     width:250px;
     height:250px;
     /*나중에 수정하기 위해 따로 추가*/
     background-image: url(/image/balloons.jpg);
     background-size: cover;
 }
-.box2>.section3>.gallery:nth-child(3)>.image{
-    margin:15px;
+.box2>.section3>.gallery:nth-child(3) .image{
     width:250px;
     height:250px;
     /*나중에 수정하기 위해 따로 추가*/
     background-image: url(/image/balloons.jpg);
     background-size: cover;
 }
-.box2>.section3>.gallery:nth-child(4)>.image{
-    margin:15px;
+.box2>.section3>.gallery:nth-child(4) .image{
     width:250px;
     height:250px;
     /*나중에 수정하기 위해 따로 추가*/
@@ -155,11 +181,20 @@ margin:20px 0;
     padding:8px 12px;
     border-radius: 15px;
 }
+.box2>.section3>.title>a:hover{
+    background-color: #eb5d99;
+    transition: all 1s;
+}
 /*section4 관련뉴스*/
 .section4{
     margin-top:40px;
     padding:60px 0;
     height:350px;
+}
+.section4>table{
+    width:80%;
+    margin:auto;
+    margin-top:30px;
 }
 .section4>table tr>td:first-child{
     color:#2d3192;
@@ -171,10 +206,8 @@ margin:20px 0;
     border-top: #2d3192 3px solid;
     border-bottom:#2d3192 3px solid;
 }
-.section4>table{
-    width:80%;
-    margin:auto;
-    margin-top:30px;
+.section4>table tr:hover td:last-child{
+    color:#eb5d99;
 }
 /*footer 부분*/
 .footer{
@@ -213,4 +246,9 @@ margin:20px 0;
     color:white;
     font-size:1.5rem;
 }
+.topbutton:hover{
+    background-color: #eb5d99;
+    transition: all 1s;
+}
+
 /*미디어 쿼리를 통한 CSS 디자인*/
