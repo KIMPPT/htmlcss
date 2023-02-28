@@ -1,0 +1,37 @@
+/*come.html에 적용되는 css*/
+/*sectionmpa*/
+.sectionmap{
+    padding-top:100px;
+    padding-bottom:60px;
+}
+.sectionmap>div{
+    margin:auto;
+    margin-bottom:50px;
+}
+.sectionmap>h3{
+    /*index-style에 있는 값 접근 가능*/
+    font-size:1.3rem;
+    font-family: 'Black Han Sans', sans-serif;
+    padding-left:40px;
+    padding-top:40px;
+}
+.sectionmap>table{
+    margin:auto;
+    width:600px;
+    text-align:center;
+    margin-bottom:40px;
+}
+.sectionmap>table tr{
+    border-bottom:2px gray solid;
+    
+}
+.sectionmap>table tr:first-child{
+    border-top:5px gray solid;
+}
+.sectionmap>table td{
+    border-right:2px gray solid;
+    padding:10px 0px;
+}
+.sectionmap>table tr:first-child>td:last-child{
+    border-right:none;
+}
