@@ -125,6 +125,8 @@ section{
 }
 .section2>.title>h3{
     font-family: 'Nanum Brush Script', cursive;
+    font-size:2rem;
+    line-height:150%;
 }
 /*section3 시민갤러리*/
 .box2>.section3>.title{
