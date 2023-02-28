@@ -1,0 +1,11 @@
+/*margin과 padding 값은 각각의 태그 안에 넣어 줄 수도 있지만
+  따로 작성하고, 클래스를 추가하는 식으로 작성 할 수도 있다.*/
+.mall1{
+    margin:10px;
+}
+.mall2{
+    margin:20px;
+}
+.ptop1{
+    padding-top:10px;
+}

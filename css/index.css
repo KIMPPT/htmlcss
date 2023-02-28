@@ -7,6 +7,10 @@ h1{
     font-size:2rem;
     font-family: 'Black Han Sans', sans-serif;
 }
+a{
+    text-decoration: none;
+    color:white;
+}
 /*클래스 이름을 통한 CSS 디자인*/
 /*header의 nav*/
 .header{
@@ -34,13 +38,7 @@ h1{
     justify-content:space-evenly;
 }
 .header>.nav>.menu a{
-    text-decoration: none;
     font-family: 'Black Han Sans', sans-serif;
-    color:white;
-}
-.header>.nav>a{
-    color:white;
-    text-decoration: none;
 }
 .header>.nav>a>.title{
     width:170px;
@@ -135,7 +133,7 @@ justify-content:space-between;
 align-items:center;
 margin:20px 0;
 }
-.box2>.section3>.gallery{
+.box2>.section3 .gallery{
     display:inline-block;
     width:280px;
     height:350px;
@@ -143,46 +141,49 @@ margin:20px 0;
     border-radius:20px;
     text-align:center;
 }
+.box2>.section3>.galleryboard{
+    display:flex;
+    justify-content: space-evenly;
+    max-width:900px;
+    margin:auto;
+}
 /*section3의 이미지 넣는 공간*/
-.box2>.section3>.gallery>.imagebox{
+.box2>.section3 .gallery>.imagebox{
     margin:15px;
     width:250px;
     height:250px;
     overflow:hidden;
 }
-.box2>.section3>.gallery>.imagebox:hover .image{
+.box2>.section3 .gallery>.imagebox:hover .image{
     transform: scale(1.1);
     transition: all 0.5s;
 }
-.box2>.section3>.gallery:nth-child(2) .image{
-
+.box2>.section3 .gallery:nth-child(1) .image{
     width:250px;
     height:250px;
     /*나중에 수정하기 위해 따로 추가*/
     background-image: url(/image/balloons.jpg);
     background-size: cover;
 }
-.box2>.section3>.gallery:nth-child(3) .image{
+.box2>.section3 .gallery:nth-child(2) .image{
     width:250px;
     height:250px;
     /*나중에 수정하기 위해 따로 추가*/
     background-image: url(/image/balloons.jpg);
     background-size: cover;
 }
-.box2>.section3>.gallery:nth-child(4) .image{
+.box2>.section3 .gallery:nth-child(3) .image{
     width:250px;
     height:250px;
     /*나중에 수정하기 위해 따로 추가*/
     background-image: url(/image/balloons.jpg);
     background-size: cover;
 }
-.box2>.section3>.gallery>h4{
+.box2>.section3 .gallery>h4{
     font-weight:bold;
 }
 .box2>.section3>.title>a{
     background-color: #2d3192;
-    color:white;
-    text-decoration: none;
     padding:8px 12px;
     border-radius: 15px;
 }
@@ -247,8 +248,6 @@ margin:20px 0;
     padding-top:25px;
 }
 .topbutton>a{
-    text-decoration: none;
-    color:white;
     font-size:1.5rem;
 }
 .topbutton:hover{
@@ -264,6 +263,7 @@ margin:20px 0;
     cursor:pointer;
 }
 /*미디어 쿼리를 통한 CSS 디자인*/
+/*가로 767픽셀 이하일 때(모바일,태블릿)*/
 @media screen and (max-width:767px) {
     .header{background-color: #eb5d99cc;}
     .header>.nav>.mobilebutton{
@@ -272,18 +272,23 @@ margin:20px 0;
         right:20px;
         top:25px;
     }
+    /*바 모양에 커서를 가져다 대면 나오는 형식*/
     .header>.nav>.mobilebutton:hover+.menu, .header>.nav>.menu:hover{
-        height:25vh;
+        height:100px;
         text-align:right;
         transition: height 1s;
+        justify-content: flex-end;
     }
+    /*바 모양 아이콘 밑에 띄우는 형식*/
     .header>.nav>.menu{
         flex-direction:column;
         height:75px;
     }
+    /*기존 메뉴바 양식들 안나오게*/
     .header>.nav>.menu li{
         display:none;
     }
+    /*바 모양 아이콘에 커서를 가져다 대면 기존 메뉴바 양식들 나오게*/
     .header>.nav>.mobilebutton:hover+.menu li, .header>.nav>.menu:hover li{
         display:inline-block;
     }
