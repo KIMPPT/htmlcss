@@ -1,0 +1,54 @@
+/*qna.html의 css디자인*/
+/*qnamain*/
+.qnasection{
+    padding-top:100px;
+    padding-bottom:50px;
+    text-align:center;
+}
+.qnasection>form{
+
+}
+
+.qnasection>form>div{
+    margin-bottom:5px;
+}
+.qnasection>form label{
+    display:inline-block;
+    width:80px;
+}
+.qnasection>form input[type="text"]{
+    width:200px;
+}
+.qnasection>form textarea{
+    width:285px;
+    font-size:1.4rem;
+}
+.qnasection>form>.qnacheck{
+    width:300px;
+    display:flex;
+    justify-content:space-between;
+    margin:auto;
+    align-items:center;
+}
+.qnasection>form input[type="submit"]{
+    width:120px;
+}
+.qnacheck input[type="submit"]{
+    float:right;
+    background-color: white;
+    border-radius: 10px;
+    border:#2d3192 2px solid;
+    color:#2d3192;
+}
+.qnacheck> input[type="checkbox"]{
+    float:left;
+}
+.qnacheck> span{
+    float:left;
+    margin-left:-40px;
+}
+.qnacheck input[type="checkbox"]:checked~input[type="submit"]{
+    background-color: #2d3192;
+    color:white;
+    border: white 2px solid;
+}
