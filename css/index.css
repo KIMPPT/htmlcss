@@ -255,5 +255,36 @@ margin:20px 0;
     background-color: #eb5d99;
     transition: all 1s;
 }
-
+/*모바일 버튼 내용*/
+.header>.nav>.mobilebutton{
+    display:none;
+    background-image: url(/image/bars-solid.svg);
+    width:35px;
+    height:40px;
+    cursor:pointer;
+}
 /*미디어 쿼리를 통한 CSS 디자인*/
+@media screen and (max-width:767px) {
+    .header{background-color: #eb5d99cc;}
+    .header>.nav>.mobilebutton{
+        display:inline-block;
+        position:absolute;
+        right:20px;
+        top:25px;
+    }
+    .header>.nav>.mobilebutton:hover+.menu, .header>.nav>.menu:hover{
+        height:25vh;
+        text-align:right;
+        transition: height 1s;
+    }
+    .header>.nav>.menu{
+        flex-direction:column;
+        height:75px;
+    }
+    .header>.nav>.menu li{
+        display:none;
+    }
+    .header>.nav>.mobilebutton:hover+.menu li, .header>.nav>.menu:hover li{
+        display:inline-block;
+    }
+}

@@ -25,10 +25,7 @@
 }
 .qnasection>form>.qnacheck{
     width:300px;
-    display:flex;
-    justify-content:space-between;
     margin:auto;
-    align-items:center;
 }
 .qnasection>form input[type="submit"]{
     width:120px;
@@ -45,7 +42,7 @@
 }
 .qnacheck> span{
     float:left;
-    margin-left:-40px;
+    text-align:center;
 }
 .qnacheck input[type="checkbox"]:checked~input[type="submit"]{
     background-color: #2d3192;
